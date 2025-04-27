@@ -8,7 +8,6 @@ import AIResults from "./AIResults";
 interface FileUploadSectionProps {
   value: File[];   
   onChange(files: File[]): void; 
-  onResult(result: CalorieResult): void;
 
 }
 interface CalorieResult {
@@ -24,7 +23,7 @@ function sanitizeJsonFence(raw: string): string {
     .replace(/\s*```$/, "");            // closing fence  ```
 }
 
-export function FileUploadSection({ value, onChange, onResult }: FileUploadSectionProps) {
+export function FileUploadSection({ value, onChange }: FileUploadSectionProps) {
   const [selectedFile, setSelectedFile] = useState<File[]>(value);
   const [result, setResult] = useState<CalorieResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -79,8 +78,6 @@ export function FileUploadSection({ value, onChange, onResult }: FileUploadSecti
         />
 
       </div>
-          
-      
     </div>
   );
 }

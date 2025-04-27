@@ -3,8 +3,6 @@ import React from 'react'
 
 interface AIResultsProps {
   result: CalorieResult | null;
-
-
 }
 
 const AIResults = ({ result }: AIResultsProps) => {
