@@ -1,3 +1,4 @@
+"use client"
 import { FileUploadSection } from '@/components/FileUpload';
 import React, { useState } from 'react';
 
