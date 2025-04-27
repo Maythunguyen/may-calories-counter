@@ -8,7 +8,6 @@ import AIResults from "./AIResults";
 interface FileUploadSectionProps {
   value: File[];   
   onChange(files: File[]): void; 
-
 }
 interface CalorieResult {
   food_items: string[];
@@ -36,7 +35,7 @@ export function FileUploadSection({ value, onChange }: FileUploadSectionProps) {
 
   useEffect(() => {
 
-    if(!selectedFile) return;
+    if(!selectedFile || selectedFile.length === 0) return;
     
     const upload = async () => {
       setIsLoading(true);

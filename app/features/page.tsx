@@ -5,10 +5,11 @@ import React, { useState } from 'react';
 export default function FeaturePage() {
     const [files, setFiles] = useState<File[]>([]);
     return (
-    
-    <FileUploadSection
-        value={files}
-        onChange={setFiles}
-    />
+        <div className='px-6'>
+            <FileUploadSection
+                value={files}
+                onChange={setFiles}
+            />
+        </div>
     );
 }
