@@ -1,6 +1,13 @@
 import { FileUploadSection } from '@/components/FileUpload';
-import React from 'react'
+import React, { useState } from 'react';
 
 export default function FeaturePage() {
-    return <FileUploadSection />;
-  }
+    const [files, setFiles] = useState<File[]>([]);
+    return (
+    
+    <FileUploadSection
+        value={files}
+        onChange={setFiles}
+    />
+    );
+}

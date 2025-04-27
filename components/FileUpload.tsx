@@ -50,8 +50,12 @@ export function FileUploadSection({ value, onChange }: FileUploadSectionProps) {
         const data = typeof cleaned === "string" ? JSON.parse(cleaned) : cleaned;
         setResult(data);
         console.log(data)
-      } catch (e: any) {
-        setError(e.message);
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError(String(error));
+        }
       } finally {
         setIsLoading(false);
       }

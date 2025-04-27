@@ -4,6 +4,11 @@ import React from 'react'
 interface AIResultsProps {
   result: CalorieResult | null;
 }
+interface CalorieResult {
+  food_items: string[];
+  calories_per_item: number[];
+  total_calories: number;
+}
 
 const AIResults = ({ result }: AIResultsProps) => {
 
