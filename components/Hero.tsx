@@ -66,7 +66,7 @@ export function HeroSectionOne() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col items-center justify-center"
             >
-              <div className="flex flex-col items-center justify-center w-40 h-40 border-1 border-dashed border-yellow-400 rounded-full">
+              <div className="flex flex-col items-center justify-center w-35 h-35 border-1 border-dashed border-yellow-400 rounded-full">
                 <p className="text-xl font-bold">87 000 +</p>
                 <p className="text-sm text-gray-600 mt-2">reviews</p>
               </div>
