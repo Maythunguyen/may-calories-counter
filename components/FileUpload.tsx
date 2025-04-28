@@ -5,6 +5,7 @@ import { caloCalculateApi } from "@/app/api/CaloCalculationApi";
 import AIResults from "./AIResults";
 
 
+
 interface FileUploadSectionProps {
   value: File[];   
   onChange(files: File[]): void; 
@@ -64,6 +65,8 @@ export function FileUploadSection({ value, onChange }: FileUploadSectionProps) {
     
   }, [selectedFile]);
 
+ 
+
   
   return (
     <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
@@ -74,7 +77,7 @@ export function FileUploadSection({ value, onChange }: FileUploadSectionProps) {
       </div>
       
       <div className="w-full max-w-md mx-auto min-h-96 mt-10">
-        {isLoading && <p className="mt-4">Analysing…</p>}
+        {isLoading && <p className="mt-4 border border-amber-700 px-6 py-4 text-amber-700 rounded-3xl items-center flex w-[30%] font-bold">Analysing…</p>}
           {error && <p className="mt-4 text-red-600">{error}</p>}
           <AIResults 
             result={result}
