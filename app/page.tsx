@@ -1,11 +1,11 @@
 
 import { HeroSectionOne } from "@/components/Hero";
-import { Navbar } from "@/components/Navbar";
+import {  NavbarSection } from "@/components/Navbar";
 
 export default function Home() {
   return (
     <main className="py-20 mx-auto">
-      <Navbar />
+      <NavbarSection />
       <HeroSectionOne />
     </main>
   );
