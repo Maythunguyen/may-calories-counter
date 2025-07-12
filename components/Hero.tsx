@@ -30,7 +30,7 @@ export function HeroSectionOne() {
                 And Lose Weight Successfully
               </p>
               
-              <button className="bg-yellow-400 text-black px-4 md:px-6 py-2 md:py-3 rounded-full font-medium hover:bg-yellow-500 transition-colors flex items-center gap-2 text-sm md:text-base" onClick={() => router.push('/features')}>
+              <button className="bg-yellow-400 text-black px-4 md:px-6 py-2 md:py-3 rounded-full font-medium hover:bg-yellow-500 transition-colors flex items-center gap-2 text-sm md:text-base cursor-pointer" onClick={() => router.push('/features')}>
                 Go to the app <ArrowRight size={18} />
               </button>
             </motion.div>
